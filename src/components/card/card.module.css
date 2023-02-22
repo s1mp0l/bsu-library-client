@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 190px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    padding: 8px;
+}
+
+.imgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horContainer {
+    flex-direction: row;
+    width: 100%;
+}
+
+.horContainer .imgWrapper {
+    max-width: 120px;
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.horRating {
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.horWrapper {
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.button {
+    margin-top: 12px;
+    flex-grow: 0;
+}
+
+.buttonWrapper {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.title {
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #363636;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.titleWrapper {
+    height: 54px;
+    display: flex;
+    align-items: center;
+}
+
+.author {
+    height: 36px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1px;
+    color: #727272;
+}
+
+.horContainer .titleWrapper {
+    height: auto;
+}
+
+.horContainer .title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: #363636;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .horRating {
+        position: static;
+        order: 3;
+    }
+
+    .horContainer .textBlock {
+        gap: 3px;
+    }
+
+    .horContainer .buttonWrapper {
+        position: static;
+    }
+
+    .horContainer .imgWrapper {
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .horContainer .title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+        color: #363636;
+    }
+}
+

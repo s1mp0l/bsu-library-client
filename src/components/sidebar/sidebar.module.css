@@ -1,0 +1,24 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.activeSeparator {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+}
+
+.link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #363636;
+}
+
+.mainLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}

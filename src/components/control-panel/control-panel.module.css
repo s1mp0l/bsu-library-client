@@ -1,0 +1,12 @@
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.wrapperControls {
+    display: flex;
+    gap: 16px;
+}

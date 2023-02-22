@@ -1,0 +1,19 @@
+.head {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    border: 0;
+}
+
+.headActive {
+    border-bottom: 1px solid #F8650A;
+}
+
+.arrowInactive {
+    transform: rotate(180deg);
+}
+
+.notVisible {
+    display: none;
+}

@@ -1,0 +1,71 @@
+.container {
+    position: relative;
+    width: 350px;
+    background: #FFFFFF;
+    padding: 11px 16px;
+    box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 599px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.input {
+    outline: none;
+    width: 100%;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #A7A7A7;
+}
+
+.inputMobile {
+
+}
+
+.mobileContainer {
+    padding: 10px 16px !important;
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.buttonMobile {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 599px;
+    border: none;
+}
+
+.buttonCloseSearch {
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 1439px) {
+    .container {
+        width: 274px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 32px;
+        padding: 0px;
+    }
+}
+
+.notVisible {
+    display: none;
+}

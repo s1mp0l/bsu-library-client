@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.headWrapper {
+    display: flex;
+    gap: 24px;
+}
+
+.textWrapper {
+    display: flex;
+    gap: 24px;
+}
+
+.name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1px;
+    color: #727272;
+}
+
+.comment {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #363636;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 767px) {
+    .textWrapper {
+        flex-direction: column;
+        gap: 3px;
+    }
+}

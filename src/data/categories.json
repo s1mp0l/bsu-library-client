@@ -1,0 +1,74 @@
+{
+    "categories": [
+        {
+            "name": "Бизнес-книги",
+            "route": "business-books",
+            "count": 14
+        },
+        {
+            "name": "Детективы",
+            "route": "detectives",
+            "count": 8
+        },
+        {
+            "name": "Детские книги",
+            "route": "kids-books",
+            "count": 14
+        },
+        {
+            "name": "Зарубежная литература",
+            "route": "foreign-literature",
+            "count": 2
+        },
+        {
+            "name": "История",
+            "route": "history",
+            "count": 5
+        },
+        {
+            "name": "Классическая литература",
+            "route": "classic-literature",
+            "count": 12
+        },
+        {
+            "name": "Книги по психологии",
+            "route": "psychology-books",
+            "count": 11
+        },
+        {
+            "name": "Компьютерная литература",
+            "route": "computer-literature",
+            "count": 54
+        },
+        {
+            "name": "Культура и искусство",
+            "route": "culture-and-art",
+            "count": 5
+        },
+        {
+            "name": "Наука и образование",
+            "route": "science-and-education",
+            "count": 2
+        },
+        {
+            "name": "Публицистическая литература",
+            "route": "nonfiction-literature",
+            "count": 0
+        },
+        {
+            "name": "Справочники",
+            "route": "handbooks",
+            "count": 10
+        },
+        {
+            "name": "Фантастика",
+            "route": "fantastic",
+            "count": 12
+        },
+        {
+            "name": "Юмористическая литература",
+            "route": "humour-literature",
+            "count": 8
+        }
+    ]
+}
