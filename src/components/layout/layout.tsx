@@ -7,7 +7,7 @@ import {Header} from '../header/header';
 import styles from './layout.module.css';
 
 export const Layout = () => (
-    <div className={styles.layout}>
+    <div className='pageBody'>
         <Header />
         <Outlet />
         <Footer />

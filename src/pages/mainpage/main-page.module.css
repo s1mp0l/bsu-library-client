@@ -1,0 +1,43 @@
+.mainPage {
+    position: relative;
+}
+
+.burger {
+    position: absolute;
+    top: 30px;
+    left: 165px;
+}
+
+.authBtns {
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: 165px;
+}
+
+.mainPageBody {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px!important;
+}
+
+@media (max-width: 1439px) {
+    .burger {
+        left: 64px;
+    }
+
+    .authBtns {
+        right: 64px;
+    }
+}
+
+@media (max-width: 767px) {
+    .burger {
+        left: 16px;
+    }
+
+    .authBtns {
+        display: none;
+    }
+}

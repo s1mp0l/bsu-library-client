@@ -5,7 +5,7 @@ import { Button } from '../../../ui/button/button';
 import styles from './card-button.module.css';
 
 type ICardButtonProps = {
-  bookStatus: string;
+  bookStatus: string | null;
   inUseUntil?: string;
 };
 

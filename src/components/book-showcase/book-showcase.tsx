@@ -1,11 +1,13 @@
+import {useEffect} from "react";
 import classNames from 'classnames';
-import {NavLink, useLocation, useMatch} from 'react-router-dom';
-import styles from './book-showcase.module.css';
+import {useMatch} from 'react-router-dom';
 import {CategoryLink} from '../sidebar/category-link/category-link';
 import {DropdownMenuList} from '../dropdown-menu-list/dropdown-menu-list';
-import {useAppSelector} from '../../hooks/redux';
+import {useAppDispatch, useAppSelector} from '../../hooks/redux';
 import {MainLink} from '../sidebar/main-link/main-link';
 import {booksAPI} from "../../api/books-api";
+import {bookSlice} from "../../store/slices/book-slice";
+import styles from './book-showcase.module.css';
 
 interface IBookShowCaseProps {
     inBurgerMenu?: boolean;
@@ -14,10 +16,16 @@ interface IBookShowCaseProps {
 
 export const BookShowcase = ({inBurgerMenu, dataTestId}: IBookShowCaseProps) => {
     const match = useMatch('/books/:category');
-    const categoriesOld = useAppSelector((state) => state.bookReducer.categoriesArray);
     const {data: categories} = booksAPI.useFetchAllCategoriesQuery('');
+
+    const dispatch = useAppDispatch();
+    const { countBooksInCategories } = bookSlice.actions;
+    useEffect(() => {
+        dispatch(countBooksInCategories(''))
+    }, [countBooksInCategories, dispatch]);
+
     const categoriesLinksComponents = categories?.map((c) => (
-        <CategoryLink to={`/books/${c.path}`} categoryName={c.name} booksAmount={5}/>
+        <CategoryLink to={`/books/${c.path}`} key={c.path} categoryName={c.name} booksAmount={undefined}/>
     ));
 
     return (
@@ -32,7 +40,7 @@ export const BookShowcase = ({inBurgerMenu, dataTestId}: IBookShowCaseProps) => 
                     </div>
                 ) : (
                     <MainLink
-                        to='books/all'
+                        to='/books/all'
                         pageName='Витрина книг'
                         dataTestId={inBurgerMenu ? 'burger-showcase' : 'navigation-showcase'}
                     />

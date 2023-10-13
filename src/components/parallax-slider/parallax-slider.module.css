@@ -1,0 +1,54 @@
+:root {
+    --swiper-navigation-color: #fff;
+    --swiper-theme-color: #fff;
+}
+
+.parallaxContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiperSlide {
+    font-size: 18px;
+    width: 100%;
+    height: 800px;
+    -webkit-box-sizing: border-box;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 40px 60px;
+}
+
+.parallaxBg {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -3000px;
+    width: 7000px;
+    height: 800px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.slideContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.1px;
+    color: #fff;
+}

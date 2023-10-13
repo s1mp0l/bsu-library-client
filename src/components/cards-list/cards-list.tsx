@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux';
-import {useParams, useSearchParams} from 'react-router-dom';
+import {useLocation, useParams, useSearchParams} from 'react-router-dom';
 
 import {Card} from '../card/card';
 
@@ -16,22 +16,14 @@ export const CardsList = ({horizontal}: ICardsListProps) => {
     const {category} = useParams()
 
     const searchQuery = searchParams.get('search') || '';
+    const sortByRating = searchParams.get('sort')==='true';
 
-    const booksOld = useAppSelector(
-        state => category === 'all' ?
-            state.bookReducer.booksArray :
-            state.bookReducer.booksArray.filter(b => b.category.route === category)
-    )
 
-    const {data: books} = booksAPI.useFetchAllBooksQuery('');
+    const books = booksAPI.useFetchAllBooksQuery('')?.data?.rows
 
-    const bookComponents = books?.filter(b => b.title.includes(searchQuery))
-        .map( b =>
-        <div data-test-id='card'>
-            <Card horizontal={horizontal}
-                  book={b}/>
-        </div>
-    )
+    // const sortedBooks = sortByRating ? books?.sort((a, b) => Number(a.rating) - Number(b?.rating)) : books;
+    const bookComponents = books ? books.filter(b => b.title.includes(searchQuery))
+        .map( b => <Card horizontal={horizontal} book={b} key={b.id}/>) : <div>Нет данных</div>
 
     return (
         <div className={[styles.container, horizontal ? styles.horizontal : ''].join(' ')}>

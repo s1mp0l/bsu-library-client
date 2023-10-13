@@ -14,15 +14,14 @@ import './slider.css';
 import { FreeMode, Navigation, Thumbs, Pagination } from 'swiper';
 import { Swiper as SwiperClass } from 'swiper/types';
 
-import img1 from '../../assets/img/book-img-1.png';
 import imgPlaceholder from '../../assets/img/book-img-placeholder.svg';
 
 interface ISliderProps {
   isMobile: boolean;
-  imagesAmount: number;
+  images: string[];
 }
 
-export const Slider = ({ isMobile, imagesAmount }: ISliderProps) => {
+export const Slider = ({ isMobile, images }: ISliderProps) => {
   const swiperNavColor = '--swiper-navigation-color' as string;
   const swiperPagColor = '--swiper-pagination-color' as string;
 
@@ -40,9 +39,9 @@ export const Slider = ({ isMobile, imagesAmount }: ISliderProps) => {
         modules={[FreeMode, Navigation, Thumbs, Pagination]}
         className='mySwiper2'
       >
-        {[...Array(imagesAmount)].map((i) => (
+        {images.map((i) => (
           <SwiperSlide>
-            <img src={img1} alt='slider-item' />
+            <img src={i} alt='slider-item' />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -58,9 +57,9 @@ export const Slider = ({ isMobile, imagesAmount }: ISliderProps) => {
           modules={[FreeMode, Navigation, Thumbs]}
           className='mySwiper'
         >
-          {[...Array(imagesAmount)].map((i) => (
+          {images.map((i) => (
             <SwiperSlide>
-              <img src={img1} alt='slider-item' />
+              <img src={i} alt='slider-item' />
             </SwiperSlide>
           ))}
         </Swiper>

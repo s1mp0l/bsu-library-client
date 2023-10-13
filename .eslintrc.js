@@ -13,13 +13,7 @@ module.exports = {
         },
     ],
     rules: {
-        'import/no-extraneous-dependencies': [
-            'error',
-            {
-                // TODO: добавить после cypess 'cypress/**/*.ts',
-                devDependencies: ['**/*.test.{ts,tsx,js,jsx}'],
-            },
-        ],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
         'import/no-default-export': 'error',
         indent: 'off', // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
         '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^action' }],

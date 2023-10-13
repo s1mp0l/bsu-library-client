@@ -1,3 +1,9 @@
+declare interface UserTokenData {
+    id: number | null,
+    email: string | null,
+    role: string | null
+}
+
 declare interface Action {
     type: string,
     payload: any

@@ -1,14 +1,25 @@
-interface ICategory {
-  name: string;
-  route: string;
-  count: number;
+interface IBook {
+    id: number;
+    title: string;
+    authors: string[];
+    issueYear: string
+    rating: number | null;
+    about: string | null;
+    status: string | null;
+    categoryId: number | null;
+    category?: ICategory | null;
+    histories?: IHistoryItem1[] | null;
+    imgAmount?: number;
+    image?: IImage | null;
+    details?: IBookDetails;
+    reviews?: IReview[];
 }
 
 declare interface IReview {
-  name: string;
-  date: string;
-  rating: number;
-  comment: string | null;
+    rating: number;
+    comment: string | null;
+    userID: number;
+    bookId: number;
 }
 
 interface IBookDetails {
@@ -23,64 +34,32 @@ interface IBookDetails {
   manufacturer: string;
 }
 
-interface IBook {
-  id: number;
-  imgSrc?: string;
-  imgAmount: number;
-  title: string;
-  author: string;
-  rating: number | null;
-  about: string;
-  details: IBookDetails;
-  reviews: IReview[];
-  category: ICategory;
-  status: string;
-  inUseUntil?: string;
-}
-
-interface IBook1 {
-    id: number;
-    image?: IImage1 | null;
-    imgAmount: number;
-    title: string;
-    authors: string[];
-    issueYear: string
-    rating: number | null;
-    booking: IBooking1 | null;
-    histories: IHistoryItem1[] | null;
-    delivery: IDelivery1 | null;
-}
-
-interface IBooking1 {
-    customerFirstName: string;
-    customerID: number;
-    customerLastName: string;
-    dateOrder: string;
-    id: number;
-    order: boolean;
-}
 
 interface IHistoryItem1 {
     id: number;
+    dateHanded: Date;
+    dateReturned: Date;
     userId: number;
 }
 
-interface IDelivery1 {
+interface IImage {
     id: number;
-    handed: boolean;
-    dateHandedFrom: string;
-    dateHandedTo: string;
-    recipientId: number;
-    recipientFirstName: string;
-    recipientLastName: string;
+    path: string;
+    alt: string;
+    bookId: number;
 }
 
-interface IImage1 {
-    url: string;
-}
-
-interface ICategory1 {
+interface ICategory {
     name: string;
     path: string;
     id: number;
+}
+
+interface IUser {
+    id: number,
+    role: string,
+    email: string,
+    password: string,
+    name: string,
+    surname: string
 }

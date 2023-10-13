@@ -7,6 +7,7 @@
 
 
 body {
+    width: 100%;
     height: 100%;
     justify-content: center;
     scroll-behavior: smooth;
@@ -84,21 +85,23 @@ button {
     z-index: 1;
 }
 
-body {
-    padding: 0px 165px;
+.pageBody {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    gap: 30px;
+    min-height: 100vh;
+
+    padding: 0px 165px;
 }
 
 @media (max-width: 1439px) {
-    body {
+    .pageBody {
         padding: 0px 64px;
     }
 }
 
 @media (max-width: 767px) {
-    body {
+    .pageBody {
         padding: 0px 16px;
     }
 }
@@ -107,9 +110,10 @@ body {
     width: 100%;
 }
 
-.pageBody {
-    display: flex;
-    flex-direction: column;
-    gap: 62px;
-    min-height: 100vh;
+.blockTitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    color: #363636;
 }

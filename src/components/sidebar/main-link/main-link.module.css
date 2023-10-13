@@ -1,4 +1,8 @@
 .mainLink {
+    display: block;
+    max-width: 200px;
+    word-wrap: normal;
+    white-space: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
@@ -7,11 +11,11 @@
 }
 
 .mainActive {
-    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    background: #014480;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
     border: 0;
-    border-bottom: 1px solid #F8650A;
+    border-bottom: 1px solid #014480;
 }

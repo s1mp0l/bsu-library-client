@@ -6,7 +6,7 @@ import styles from './contract-page.module.css'
 
 export const ContractPage = () => (
     <div className={styles.wrapper}>
-        <h1>Договор оферты</h1>
+        <h1 className='blockTitle'>Договор оферты</h1>
         <Paragraph items={contractJson.paragraphs} main={true}/>
     </div>
 );

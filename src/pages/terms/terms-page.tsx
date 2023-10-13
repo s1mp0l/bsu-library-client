@@ -6,7 +6,7 @@ import styles from './terms-page.module.css'
 
 export const TermsPage = () => (
     <div className={styles.wrapper}>
-        <h1>Правила пользования</h1>
+        <h1 className='blockTitle'>Часто задаваемые вопросы (FAQ)</h1>
         <Paragraph items={termsJson.paragraphs} main={true}/>
     </div>
 );

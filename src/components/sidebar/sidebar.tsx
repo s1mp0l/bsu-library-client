@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { NavLink, useLocation, useMatch } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { bookSlice } from '../../store/reducers/book-slice';
+import { bookSlice } from '../../store/slices/book-slice';
 
 import styles from './sidebar.module.css';
 import { BookShowcase } from '../book-showcase/book-showcase';
@@ -13,15 +13,6 @@ interface ISidebarProps {
 }
 
 export const Sidebar = ({ inBurgerMenu }: ISidebarProps) => {
-  const dispatch = useAppDispatch();
-  const { countBooksInCategories } = bookSlice.actions;
-
-  const handleCountBooks = () => {
-    dispatch(countBooksInCategories(''));
-  };
-
-  useEffect(handleCountBooks, [countBooksInCategories, dispatch]);
-
   const location = useLocation();
   const match = useMatch('/books/:category');
 
@@ -34,7 +25,7 @@ export const Sidebar = ({ inBurgerMenu }: ISidebarProps) => {
         />
         <MainLink
           to='/terms-of-use'
-          pageName='Правила пользования'
+          pageName='Часто задаваемые вопросы (FAQ)'
           dataTestId={inBurgerMenu ? 'burger-terms' : 'navigation-terms'}
         />
         <MainLink

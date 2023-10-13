@@ -1,0 +1,29 @@
+.mainPageBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.blockTitle {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #014480;
+    margin-bottom: 30px;
+}
+
+.blockContainer {
+    border-radius: 20px;
+}
+
+@media (max-width: 1439px) {
+    .mainPageBlock {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .mainPageBlock {
+        flex-direction: column;
+    }
+}

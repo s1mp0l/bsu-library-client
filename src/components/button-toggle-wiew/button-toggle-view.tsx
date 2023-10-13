@@ -1,6 +1,6 @@
 import styles from './button-toggle-view.module.css'
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {bookListSlice} from "../../store/reducers/book-list-slice";
+import {bookListSlice} from "../../store/slices/book-list-slice";
 
 interface IButtonToggleViewProps {
     horizontal: boolean,

@@ -2,72 +2,72 @@
     "categories": [
         {
             "name": "Бизнес-книги",
-            "route": "business-books",
+            "path": "business-books",
             "count": 14
         },
         {
             "name": "Детективы",
-            "route": "detectives",
+            "path": "detectives",
             "count": 8
         },
         {
             "name": "Детские книги",
-            "route": "kids-books",
+            "path": "kids-books",
             "count": 14
         },
         {
             "name": "Зарубежная литература",
-            "route": "foreign-literature",
+            "path": "foreign-literature",
             "count": 2
         },
         {
             "name": "История",
-            "route": "history",
+            "path": "history",
             "count": 5
         },
         {
             "name": "Классическая литература",
-            "route": "classic-literature",
+            "path": "classic-literature",
             "count": 12
         },
         {
             "name": "Книги по психологии",
-            "route": "psychology-books",
+            "path": "psychology-books",
             "count": 11
         },
         {
             "name": "Компьютерная литература",
-            "route": "computer-literature",
+            "path": "computer-literature",
             "count": 54
         },
         {
             "name": "Культура и искусство",
-            "route": "culture-and-art",
+            "path": "culture-and-art",
             "count": 5
         },
         {
             "name": "Наука и образование",
-            "route": "science-and-education",
+            "path": "science-and-education",
             "count": 2
         },
         {
             "name": "Публицистическая литература",
-            "route": "nonfiction-literature",
+            "path": "nonfiction-literature",
             "count": 0
         },
         {
             "name": "Справочники",
-            "route": "handbooks",
+            "path": "handbooks",
             "count": 10
         },
         {
             "name": "Фантастика",
-            "route": "fantastic",
+            "path": "fantastic",
             "count": 12
         },
         {
             "name": "Юмористическая литература",
-            "route": "humour-literature",
+            "path": "humour-literature",
             "count": 8
         }
     ]

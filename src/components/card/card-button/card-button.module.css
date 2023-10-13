@@ -1,6 +1,6 @@
 .booked {
     background: #FFFFFF;
-    border: 1px solid #BFC4C9;
+    border: 1px solid #014480;
     border-radius: 20px;
     color: #363636;
     cursor: default;
@@ -8,7 +8,7 @@
 
 .inUse {
     background: #F9F9FA;
-    border: 1px solid #BFC4C9;
+    border: 1px solid #014480;
     border-radius: 20px;
     color: #A7A7A7;
     cursor: default;
