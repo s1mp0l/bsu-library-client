@@ -1,12 +1,12 @@
-import classNames from 'classnames';
 import { ChangeEvent, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import classNames from 'classnames';
 
-import icoSearch from '../../assets/img/ico-search.svg';
 import icoCloseSearch from '../../assets/img/ico-close-search.svg';
+import icoSearch from '../../assets/img/ico-search.svg';
+import { useWindowDimensions } from '../../hooks/use-window-dimensions';
 
 import styles from './search.module.css';
-import { useWindowDimensions } from '../../hooks/use-window-dimensions';
 
 export const Search = () => {
   const isMobile = useWindowDimensions().width < 768;
@@ -33,6 +33,7 @@ export const Search = () => {
           onClick={() => {
             setMobileSearchActive(true);
           }}
+          aria-label='search-open'
         >
           <img src={icoSearch} alt='' className='ico' />
         </button>
@@ -57,6 +58,7 @@ export const Search = () => {
         onClick={() => {
           setMobileSearchActive(false);
         }}
+        aria-label='search-close'
       >
         <img src={icoCloseSearch} alt='' className='ico' />
       </button>

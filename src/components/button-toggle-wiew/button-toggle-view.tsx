@@ -1,6 +1,7 @@
+import {useAppDispatch, useAppSelector} from '../../hooks/redux';
+import {bookListSlice} from '../../store/slices/book-list-slice';
+
 import styles from './button-toggle-view.module.css'
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import {bookListSlice} from "../../store/slices/book-list-slice";
 
 interface IButtonToggleViewProps {
     horizontal: boolean,
@@ -30,7 +31,9 @@ export const ButtonToggleView = ({horizontal, icoImgActive, icoImgInactive}: IBu
         <button data-test-id={horizontal ? 'button-menu-view-list' : 'button-menu-view-window'}
                 onClick={() => handleSetHorizontal()}
                 type="button"
-                className={[styles.button, active && styles.active].join(' ')}>
+                className={[styles.button, active && styles.active].join(' ')}
+                aria-label='toggle-view'
+        >
             <img src={active ? icoImgActive : icoImgInactive} alt=""/>
         </button>
     )
